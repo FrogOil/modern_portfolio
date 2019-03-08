@@ -218,8 +218,6 @@ var pJS = function(tag_id, params) {
 
         /* density particles enabled */
         pJS.fn.vendors.densityAutoParticles();
-
-        pJSDom[0].pJS.fn.particlesRefresh();
       });
     }
   };
