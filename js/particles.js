@@ -15,7 +15,7 @@ var pJS = function(tag_id, params) {
   /* particles.js variables with default values */
   this.pJS = {
     // Default FPS limit implementation (see line 1314 for codified change).
-    fps_limit: 60,
+    fps_limit: 30,
     canvas: {
       el: canvas_el,
       w: canvas_el.offsetWidth,
@@ -23,10 +23,10 @@ var pJS = function(tag_id, params) {
     },
     particles: {
       number: {
-        value: 400,
+        value: 100,
         density: {
           enable: true,
-          value_area: 800
+          value_area: 1000
         }
       },
       color: {
