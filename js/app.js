@@ -17,7 +17,7 @@ particlesJS(
   {
     particles: {
       number: {
-        value: 90,
+        value: 80,
         density: {
           enable: true,
           value_area: 800
@@ -29,7 +29,7 @@ particlesJS(
       shape: {
         type: "circle",
         stroke: {
-          width: 0,
+          width: 1,
           color: "#ffffff"
         },
         polygon: {
@@ -70,7 +70,7 @@ particlesJS(
       },
       move: {
         enable: true,
-        speed: 0.5,
+        speed: 1.2,
         direction: "none",
         random: false,
         straight: false,
