@@ -196,7 +196,6 @@ var pJS = function(tag_id, params) {
 
     if (pJS && pJS.interactivity.events.resize) {
       window.addEventListener("resize", function() {
-        pJSDom[0].pJS.particles.move.enable = false;
         pJS.canvas.w = pJS.canvas.el.offsetWidth;
         pJS.canvas.h = pJS.canvas.el.offsetHeight;
 
