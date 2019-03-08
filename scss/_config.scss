@@ -1,8 +1,8 @@
 $primary-color: rgb(0, 0, 0);
 $secondary-color: #00d9ff;
 $show-home-image: false;
-$home-image: url(../img/background.jpg);
-$background-opacity: 0;
+$home-image: url(../img/AUGITwhite.png);
+$background-opacity: 0.5;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
