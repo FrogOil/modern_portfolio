@@ -24,13 +24,13 @@ particlesJS(
         }
       },
       color: {
-        value: "#ffffff"
+        value: "#00FFFF"
       },
       shape: {
         type: "circle",
         stroke: {
-          width: 1,
-          color: "#ffffff"
+          width: 2,
+          color: "$secondary-color"
         },
         polygon: {
           nb_sides: 5
@@ -42,21 +42,21 @@ particlesJS(
         }
       },
       opacity: {
-        value: 0.8838593085379224,
-        random: false,
+        value: 9.8838593085379224,
+        random: true,
         anim: {
-          enable: false,
+          enable: true,
           speed: 1,
           opacity_min: 0.1,
           sync: false
         }
       },
       size: {
-        value: 1,
+        value: 2,
         random: true,
         anim: {
-          enable: false,
-          speed: 16.78214379899786,
+          enable: true,
+          speed: 1.78214379899786,
           size_min: 0.1,
           sync: false
         }
@@ -64,13 +64,13 @@ particlesJS(
       line_linked: {
         enable: true,
         distance: 150,
-        color: "#ffffff",
-        opacity: 0.4,
-        width: 0.5
+        color: "#00d9ff",
+        opacity: 0.2,
+        width: 2
       },
       move: {
         enable: true,
-        speed: 3,
+        speed: 5,
         direction: "none",
         random: false,
         straight: false,
@@ -84,11 +84,11 @@ particlesJS(
       }
     },
     interactivity: {
-      detect_on: "canvas",
+      detect_on: "window",
       events: {
         onhover: {
           enable: false,
-          mode: "repulse"
+          mode: "grab"
         },
         onclick: {
           enable: false,
