@@ -14,6 +14,8 @@ var pJS = function(tag_id, params) {
 
   /* particles.js variables with default values */
   this.pJS = {
+    // Default FPS limit implementation (see line 1314 for codified change).
+    fps_limit: 60,
     canvas: {
       el: canvas_el,
       w: canvas_el.offsetWidth,
@@ -67,7 +69,7 @@ var pJS = function(tag_id, params) {
       },
       line_linked: {
         enable: true,
-        distance: 100,
+        distance: 120,
         color: "#fff",
         opacity: 1,
         width: 1
@@ -1345,34 +1347,47 @@ var pJS = function(tag_id, params) {
   };
 
   pJS.fn.vendors.draw = function() {
-    if (pJS.particles.shape.type == "image") {
-      if (pJS.tmp.img_type == "svg") {
-        if (pJS.tmp.count_svg >= pJS.particles.number.value) {
-          pJS.fn.particlesDraw();
-          if (!pJS.particles.move.enable)
-            cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
-          else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+    function defaultDraw() {
+      if (pJS.particles.shape.type == "image") {
+        if (pJS.tmp.img_type == "svg") {
+          if (pJS.tmp.count_svg >= pJS.particles.number.value) {
+            pJS.fn.particlesDraw();
+            if (!pJS.particles.move.enable)
+              cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+            else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+          } else {
+            //console.log('still loading...');
+            if (!pJS.tmp.img_error)
+              pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+          }
         } else {
-          //console.log('still loading...');
-          if (!pJS.tmp.img_error)
-            pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+          if (pJS.tmp.img_obj != undefined) {
+            pJS.fn.particlesDraw();
+            if (!pJS.particles.move.enable)
+              cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+            else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+          } else {
+            if (!pJS.tmp.img_error)
+              pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+          }
         }
       } else {
-        if (pJS.tmp.img_obj != undefined) {
-          pJS.fn.particlesDraw();
-          if (!pJS.particles.move.enable)
-            cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
-          else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
-        } else {
-          if (!pJS.tmp.img_error)
-            pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
-        }
+        pJS.fn.particlesDraw();
+        if (!pJS.particles.move.enable)
+          cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+        else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
       }
+    }
+
+    // FPS limit logic
+    // Check if the fps_limit has been set to a value other than 0 by default (and handle invalid input).
+    // If so, use a setTimeout method to apply the fps limit, if not, then unlock the FPS to the default v-sync.
+    var fps_limit = pJS.fps_limit;
+    if (fps_limit <= 0) {
     } else {
-      pJS.fn.particlesDraw();
-      if (!pJS.particles.move.enable)
-        cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
-      else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+      setTimeout(function() {
+        defaultDraw();
+      }, 1000 / fps_limit);
     }
   };
 
