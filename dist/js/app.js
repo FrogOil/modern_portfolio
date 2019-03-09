@@ -84,7 +84,7 @@ particlesJS(
       }
     },
     interactivity: {
-      detect_on: "window",
+      detect_on: "canvas",
       events: {
         onhover: {
           enable: false,
@@ -122,6 +122,6 @@ particlesJS(
         }
       }
     },
-    retina_detect: true
+    retina_detect: false
   }
 );
