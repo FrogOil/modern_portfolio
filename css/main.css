@@ -314,6 +314,8 @@ main {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 500px) {
+  .logo {
+    visibility: hidden; }
   main#home h1 {
     margin-top: 10vh; }
   .projects {
