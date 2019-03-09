@@ -12,7 +12,7 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Chathura", sans-serif;
   line-height: 1.5;
 }
 
@@ -22,17 +22,20 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 100;
+  font-size: 2rem;
 
   &.lg-heading {
     //h1/h2/h3 class, the & specifies this is NOT a nested class
-    font-size: 6rem; //Rem multiples the default html font size (which is 16px)
+    font-size: 8rem; //Rem multiples the default html font size (which is 16px)
+    text-transform: uppercase;
   }
 
   &.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    margin-bottom: 6rem;
+    padding: 0.2rem 0.5rem;
     background: rgba(lighten($primary-color, 2), 0.5);
+    // outline: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -146,7 +149,7 @@ main {
   margin-top: 1rem;
 
   div {
-    font-site: 2rem;
+    font-size: 2rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
@@ -225,18 +228,23 @@ main {
 .btn-dark {
   @extend .btn;
   background: darken($primary-color, 50);
+  font-size: 2rem;
+  text-align: center;
   color: #fff;
 }
 
 .btn-light {
   @extend .btn;
   background: lighten($primary-color, 50);
+  font-size: 2rem;
+  text-align: center;
   color: #333;
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
+  font-size: 2rem;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
