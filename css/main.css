@@ -68,7 +68,7 @@
     .menu .nav-item .nav-link {
       display: inline-block;
       position: relative;
-      font-size: 30px;
+      font-size: 3rem;
       text-transform: uppercase;
       padding: 1rem 0;
       font-weight: 300;
@@ -99,23 +99,25 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Chathura", sans-serif;
   line-height: 1.5; }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400; }
+  font-weight: 100;
+  font-size: 2rem; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 8rem;
+    text-transform: uppercase; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    margin-bottom: 6rem;
+    padding: 0.2rem 0.5rem;
     background: rgba(5, 5, 5, 0.5); }
 
 a {
@@ -188,7 +190,7 @@ main {
   align-items: center;
   margin-top: 1rem; }
   .boxes div {
-    font-site: 2rem;
+    font-size: 2rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
@@ -246,15 +248,20 @@ main {
 
 .btn-dark {
   background: black;
+  font-size: 2rem;
+  text-align: center;
   color: #fff; }
 
 .btn-light {
   background: gray;
+  font-size: 2rem;
+  text-align: center;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
+  font-size: 2rem;
   background: black;
   color: #fff;
   height: 60px; }
