@@ -285,14 +285,18 @@ main {
     display: none; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  main#home h1 {
+    margin-top: 25vh; }
   h2.sm-heading {
     width: 100%; }
+  h2.mobileDetected {
+    display: none; }
   .logo {
     opacity: 0; }
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
-@media only screen and (max-width: 768px) and (orientation: landscape) {
+@media screen and (max-width: 768px) {
   h2.desktopDetected {
     display: none; }
   h2.mobileDetected {
@@ -309,6 +313,8 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+  main#home h1 {
+    margin-top: 10vh; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -334,9 +340,10 @@ main {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
-@media screen and (max-width: 500px) and (orientation: portrait) {
+@media screen and (max-width: 500px) {
   h2.sm-heading {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
   .logo {
     opacity: 0; }
   h2.desktopDetected {
