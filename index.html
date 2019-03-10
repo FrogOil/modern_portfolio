@@ -34,13 +34,13 @@
       antialias: true,
       alpha: true
     });
-    renderer.setClearColor(0x000000, 0.1);
+    renderer.setClearColor(0x000000, 0);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     //CAMERA
     camera = new THREE.PerspectiveCamera(
-      35,
+      45,
       window.innerWidth / window.innerHeight,
       0.1,
       8.5
@@ -50,10 +50,10 @@
     scene = new THREE.Scene();
 
     //LIGHTS
-    var light = new THREE.AmbientLight(0x000000, 55);
+    var light = new THREE.AmbientLight(0x000000, 5);
     scene.add(light);
 
-    var light2 = new THREE.PointLight(0x00d9ff, 1);
+    var light2 = new THREE.PointLight(0x00d9ff, 3.6);
 
     scene.add(light2);
 
