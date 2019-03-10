@@ -332,17 +332,89 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
-
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  main#home h1 {
-    display: none; } }
-
-@media screen and (max-width: 500px) and (orientation: landscape) {
+    grid-template-columns: repeat(3, 1fr); }
   main#home h1 {
     display: none; } }
 
 @media screen and (max-width: 500px) and (orientation: portrait) {
+  main#home h1 {
+    display: none; }
+  h2.sm-heading {
+    width: 100%; }
+  .logo {
+    opacity: 0; }
+  h2.desktopDetected {
+    display: none; }
+  h2.mobileDetected {
+    display: block; }
+  .menu-btn {
+    display: none; }
+  main#home h1 {
+    margin-top: 3vh; }
+  .projects {
+    grid-template-columns: 2fr; } }
+
+/* Galaxy S5 portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  main#home h1 {
+    display: none; }
+  h2.sm-heading {
+    width: 100%; }
+  .logo {
+    opacity: 0; }
+  h2.desktopDetected {
+    display: none; }
+  h2.mobileDetected {
+    display: block; }
+  .menu-btn {
+    display: none; }
+  main#home h1 {
+    margin-top: 3vh; }
+  .projects {
+    grid-template-columns: 2fr; } }
+
+/* Galaxy S5 landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  main#home h1 {
+    display: none; }
+  h2.sm-heading {
+    width: 100%; }
+  .logo {
+    opacity: 0; }
+  h2.desktopDetected {
+    display: none; }
+  h2.mobileDetected {
+    display: block; }
+  .menu-btn {
+    display: none; }
+  main#home h1 {
+    margin-top: 3vh; }
+  .projects {
+    grid-template-columns: 2fr; } }
+
+/* Galaxy S8 portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  main#home h1 {
+    display: none; }
+  h2.sm-heading {
+    width: 100%; }
+  .logo {
+    opacity: 0; }
+  h2.desktopDetected {
+    display: none; }
+  h2.mobileDetected {
+    display: block; }
+  .menu-btn {
+    display: none; }
+  main#home h1 {
+    margin-top: 3vh; }
+  .projects {
+    grid-template-columns: 2fr; } }
+
+/* Galaxy S8 landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  main#home h1 {
+    display: none; }
   h2.sm-heading {
     width: 100%; }
   .logo {
