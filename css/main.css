@@ -337,7 +337,7 @@ main {
     display: none; } }
 
 /* Galaxy S8 portrait */
-@media screen and (device-width: 360px) and (orientation: portrait) {
+@media screen and (max-device-width: 361px) and (orientation: portrait) {
   h2.desktopDetected {
     display: none; }
   h2.mobileDetected {
@@ -382,7 +382,7 @@ main {
     display: none; } }
 
 /* Galaxy S8 landscape */
-@media screen and (device-width: 740px) and (orientation: landscape) {
+@media screen and (max-device-width: 741px) and (orientation: landscape) {
   h2.desktopDetected {
     display: none; }
   h2.mobileDetected {
