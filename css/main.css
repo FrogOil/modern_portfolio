@@ -292,7 +292,7 @@ main {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
   h2.desktopDetected {
     display: none; }
   h2.mobileDetected {
@@ -333,6 +333,14 @@ main {
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  main#home h1 {
+    display: none; } }
+
+@media screen and (max-width: 500px) and (orientation: landscape) {
+  main#home h1 {
+    display: none; } }
 
 @media screen and (max-width: 500px) and (orientation: portrait) {
   h2.sm-heading {
