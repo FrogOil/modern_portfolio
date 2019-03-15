@@ -67,7 +67,7 @@
     var spotLight = new THREE.SpotLight(0x00d9ff, 3.6);
     spotLight.angle = Math.PI / 5;
     spotLight.penumbra = 0.2;
-    spotLight.position.set(3, 2, 2.5);
+    spotLight.position.set(4.4, 2, 2.5);
     spotLight.castShadow = true;
     spotLight.shadow.camera.near = 3;
     spotLight.shadow.camera.far = 1000;
@@ -96,7 +96,6 @@
     var meshXPos = window.innerWidth / 960;
 
     function handle_load(gltf) {
-      console.log(gltf);
       mesh = gltf.scene;
 
       console.log(mesh.children[0]);
@@ -106,7 +105,7 @@
 
       mesh.position.z = -7;
       //window.alert(meshXPos);
-      mesh.position.x = meshxPos;
+      mesh.position.x = 0;
       mesh.position.y = -0;
       mesh.rotation.y = 0;
       mesh.castShadow = true;
