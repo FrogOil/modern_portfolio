@@ -90,11 +90,13 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  overflow: hidden;
   background: black;
   color: #fff;
   height: 100%;
@@ -150,11 +152,26 @@ main {
     main#home h1 {
       margin-top: 30vh;
       line-height: 0.5; }
+  main#work {
+    overflow: hidden; }
+    main#work h1 {
+      margin-top: 5vh;
+      line-height: 0.5; }
+  main#about {
+    overflow: hidden; }
+    main#about h1 {
+      margin-top: 5vh;
+      line-height: 0.5; }
+  main#contact {
+    overflow: hidden; }
+    main#contact h1 {
+      margin-top: 5vh;
+      line-height: 0.5; }
 
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3" "job4 job5 job6" "job7 job8 job9";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -170,10 +187,35 @@ main {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
+  .about-info .job-4 {
+    grid-area: job4; }
+  .about-info .job-5 {
+    grid-area: job5; }
+  .about-info .job-6 {
+    grid-area: job6; }
+  .about-info .job-7 {
+    grid-area: job7; }
+  .about-info .job-8 {
+    grid-area: job8; }
+  .about-info .job-9 {
+    grid-area: job9; }
   .about-info .job {
     background: #0d0d0d;
-    padding: 0.5rem;
+    padding: 1rem;
     border-bottom: #00d9ff 5px solid; }
+    .about-info .job h3 {
+      font-size: 2rem;
+      margin: 0; }
+    .about-info .job h6 {
+      font-size: 1.5rem;
+      margin: 0; }
+    .about-info .job p {
+      font-size: 1.5rem; }
+    .about-info .job li {
+      text-align: left;
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      padding-left: 2rem; }
 
 .projects {
   display: grid;
@@ -207,7 +249,7 @@ main {
         color: #000; }
 
 #particles-js {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: -3;
@@ -239,12 +281,12 @@ main {
   opacity: 0.5; }
 
 .logo {
-  position: absolute;
+  position: fixed;
   width: 350px;
   height: 200px;
   right: 50px;
   bottom: 50px;
-  z-index: 1;
+  z-index: -1;
   background: url("../img/AugitLtd.png");
   background-repeat: no-repeat;
   opacity: 1; }
@@ -271,8 +313,9 @@ main {
   color: #333; }
 
 #main-footer {
+  position: relative;
   text-align: center;
-  padding: 1rem;
+  padding: 0rem;
   font-size: 2rem;
   background: black;
   color: #fff;
@@ -335,7 +378,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3" "job4" "job5" "job6" "job7" "job8" "job9";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
